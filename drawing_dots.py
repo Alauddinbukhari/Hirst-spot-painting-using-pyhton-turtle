@@ -1,27 +1,29 @@
-# import colorgram
-#
-# colors = colorgram.extract("image.jpg", 15)
-# print(len(colors))
-# colors_tuple = []
-#
-#
-# def turn_to_tuple(rgb_tuple):
-#     red = rgb_tuple.r
-#     green = rgb_tuple.g
-#     blue = rgb_tuple.b
-#     return colors_tuple.append((red, green, blue))
-#
-#
-# def imgs_to_tuple(colors):
-#     for i in range(len(colors)):
-#         color = colors[i]
-#         rgb_tuple = color.rgb
-#         turn_to_tuple(rgb_tuple)
-#
-#
-#
-# imgs_to_tuple(colors)
-# print(colors_tuple)
+import colorgram #using colorgram library to extract images colors
+
+colors = colorgram.extract("image.jpg", 15)#extract colors object with attributes such as rgb code
+print(len(colors))
+colors_tuple = []
+
+
+def turn_to_tuple(rgb_tuple):
+    red = rgb_tuple.r
+    green = rgb_tuple.g
+    blue = rgb_tuple.b
+    return colors_tuple.append((red, green, blue))
+
+
+def imgs_to_tuple(colors):
+    for i in range(len(colors)):
+        color = colors[i]
+        rgb_tuple = color.rgb
+        turn_to_tuple(rgb_tuple)
+
+
+
+imgs_to_tuple(colors)
+print(colors_tuple)
+
+
 import random as r
 from turtle import Turtle, Screen
 colors=["yellow","red","orange","blue","brown","purple","seagreen"]
